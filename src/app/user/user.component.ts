@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { runInThisContext } from "vm";
 
 @Component({
   selector: "app-user",
@@ -10,8 +11,7 @@ export class UserComponent implements OnInit {
   allowResetName = false;
   constructor() {}
 
-  checkEmpty(event: any) {
-    this.username = event.target.value;
+  checkEmpty() {
     if (this.username.length >= 1) {
       this.allowResetName = true;
     }
@@ -21,5 +21,6 @@ export class UserComponent implements OnInit {
 
   showUser() {
     this.username = "";
+    this.allowResetName = false;
   }
 }
