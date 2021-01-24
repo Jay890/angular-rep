@@ -1,0 +1,14 @@
+<p>user works!</p>
+<label for="username">Username:</label>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (change)="checkEmpty()"
+/>
+<p>{{ username }}</p>
+<button [disabled]="!allowResetName" (click)="showUser()">Reset Name</button>
+
+<!-- perform property binding the disabled property -->
+<!-- create a method in the typescript -->
+<!-- bind a click event to button to invoke method created -->
