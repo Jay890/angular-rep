@@ -5,3 +5,5 @@
 </button>
 
 <p [hidden]="!seeDetails">User details consist of a username and password</p>
+<p>Number of clicks: {{ numberOfClicks }}</p>
+<p *ngFor="let holder of arrayHolder">Secret array {{ holder }}</p>

@@ -8,6 +8,8 @@ import { Component, OnInit } from "@angular/core";
 export class UserDetailsComponent implements OnInit {
   userDetails = "";
   seeDetails = false;
+  numberOfClicks = 0;
+  arrayHolder = [];
   constructor() {}
 
   ngOnInit(): void {}
@@ -18,5 +20,8 @@ export class UserDetailsComponent implements OnInit {
     } else {
       this.seeDetails = false;
     }
+    this.numberOfClicks++;
+
+    this.arrayHolder.push(this.numberOfClicks);
   }
 }
