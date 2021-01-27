@@ -10,6 +10,7 @@ export class UserDetailsComponent implements OnInit {
   seeDetails = false;
   numberOfClicks = 0;
   arrayHolder = [];
+
   constructor() {}
 
   ngOnInit(): void {}

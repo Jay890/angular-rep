@@ -6,4 +6,10 @@
 
 <p [hidden]="!seeDetails">User details consist of a username and password</p>
 <p>Number of clicks: {{ numberOfClicks }}</p>
-<p *ngFor="let holder of arrayHolder">Secret array {{ holder }}</p>
+<p
+  *ngFor="let holder of arrayHolder; index as i"
+  [ngStyle]="{ 'background-color': i >= 4 ? 'blue' : 'white' }"
+  [ngClass]="{ 'off-text': i >= 4 }"
+>
+  Secret array {{ holder }}
+</p>
