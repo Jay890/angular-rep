@@ -23,6 +23,7 @@ export class UserDetailsComponent implements OnInit {
     }
     this.numberOfClicks++;
 
-    this.arrayHolder.push(this.numberOfClicks);
+    // this.arrayHolder.push(this.numberOfClicks);
+    this.arrayHolder.push(new Date());
   }
 }
